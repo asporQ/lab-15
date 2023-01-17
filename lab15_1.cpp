@@ -1,10 +1,34 @@
 #include <iostream>
 using namespace std;
 
+
 template <typename T>
 void insertionSort(T d[],int N){
+    T key;
+    int i , j;
+    
+    for (i = 1; i < N; i++){
+        key = d[i];
+        j = i - 1;
+
+        cout << "Pass " << i << ":";
+ 
+        while (j >= 0 && d[j] < key)
+        {
+            d[j + 1] = d[j];
+            j--;
+        }
+        d[j + 1] = key;
+
+    for(j=0;j<N;j++){
+        cout << d[j] << " ";
+        if(j+1== N) cout << endl;
+    
+    }
+    }
 
 }
+
 
 int main(){
 	int a[10] = {12,25,30,44,2,0,4,7,55,25};
